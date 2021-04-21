@@ -20,24 +20,24 @@ section#about-container {
             height: 30rem;
             margin-left: 2rem;
             margin-top: 2rem;
-            background-image: url("../../assets/dev.jpg");
+            background-image: url("../../src/assets/dev.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             border: 2px solid #000;
             @include selected-animation($animation-std-time, img-about-main-animation);
     
             &.front{
-                background-image: url("../../assets/dev.jpg");
+                background-image: url("../../src/assets/dev.jpg");
                 @include selected-animation($animation-std-time, img-about-front-animation);
             }
     
             &.tennis-player{
-                background-image: url("../../assets/tennis_player.jpg");
+                background-image: url("../../src/assets/tennis_player.jpg");
                 @include selected-animation($animation-std-time, img-about-tennis-animation)
             }
     
             &.family{
-                background-image: url("../../assets/family.jpg");
+                background-image: url("../../src/assets/family.jpg");
                 @include selected-animation($animation-std-time, img-about-family-animation);
             }
         }

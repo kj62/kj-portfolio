@@ -129,7 +129,7 @@ nav {
         nav ul.navigation-menu li.nav-menu-item a.logo {
           width: 7.2rem;
           height: 7.2rem;
-          background-image: url("../../assets/KJ_logo.png");
+          background-image: url("../../src/assets/KJ_logo.png");
           background-repeat: no-repeat;
           background-size: cover; }
 
@@ -178,7 +178,7 @@ nav {
     .logo-mobile .logo {
       width: 7.2rem;
       height: 7.2rem;
-      background-image: url("../../assets/KJ_logo.png");
+      background-image: url("../../src/assets/KJ_logo.png");
       background-repeat: no-repeat;
       background-size: cover; } }
 
@@ -214,7 +214,7 @@ nav ul.footer-menu {
       nav ul.footer-menu li.footer-item a.footer-arrow {
         width: 7rem;
         height: 5.5rem;
-        background-image: url("../../assets/arrow-up.png");
+        background-image: url("../../src/assets/arrow-up.png");
         background-repeat: no-repeat;
         background-size: cover; }
     nav ul.footer-menu li.footer-item p {
@@ -505,7 +505,7 @@ section#about-container {
         height: 20rem;
         cursor: pointer; }
         section#about-container .about-info .mobile-about-img.toggle-img {
-          background-image: url("../../assets/tennisFamily.jpg"); }
+          background-image: url("../../src/assets/tennisFamily.jpg"); }
   section#about-container .about-selection {
     display: none; }
   section#about-container .about-info .about-note .details-container p.about-details {
@@ -638,14 +638,14 @@ section#projects-container {
             display: flex;
             justify-content: center; }
             section#projects-container .projects-main-container .projects-grid-row-element-content.tennis-site {
-              background-image: url("../../assets/tennis_site.png");
+              background-image: url("../../src/assets/tennis_site.png");
               width: 77%; }
             section#projects-container .projects-main-container .projects-grid-row-element-content.js-quiz {
-              background-image: url("../../assets/js_quiz.png"); }
+              background-image: url("../../src/assets/js_quiz.png"); }
             section#projects-container .projects-main-container .projects-grid-row-element-content.gulp-runner {
-              background-image: url("../../assets/gulp.png"); }
+              background-image: url("../../src/assets/gulp.png"); }
             section#projects-container .projects-main-container .projects-grid-row-element-content.clarity-validator {
-              background-image: url("../../assets/clarity.png"); }
+              background-image: url("../../src/assets/clarity.png"); }
 
 @media screen and (max-width: 860px) {
   section#projects-container .projects-main-container .projects-grid {
@@ -715,7 +715,7 @@ section#contact-container {
         width: 4rem;
         height: 4rem; }
         section#contact-container .contact-info .contact-icons-box a .contact-icon.msg {
-          background-image: url("../../assets/msg-icon.png");
+          background-image: url("../../src/assets/msg-icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           box-shadow: #333333 1px 1px 2px; }
@@ -723,7 +723,7 @@ section#contact-container {
             transform: translate(2px, 2px);
             cursor: pointer; }
         section#contact-container .contact-info .contact-icons-box a .contact-icon.fb {
-          background-image: url("../../assets/fb-icon.png");
+          background-image: url("../../src/assets/fb-icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           box-shadow: #333333 1px 1px 2px; }
@@ -731,7 +731,7 @@ section#contact-container {
             transform: translate(2px, 2px);
             cursor: pointer; }
         section#contact-container .contact-info .contact-icons-box a .contact-icon.linkedin {
-          background-image: url("../../assets/linkedin-icon.png");
+          background-image: url("../../src/assets/linkedin-icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           box-shadow: #333333 1px 1px 2px; }
@@ -739,7 +739,7 @@ section#contact-container {
             transform: translate(2px, 2px);
             cursor: pointer; }
         section#contact-container .contact-info .contact-icons-box a .contact-icon.gh {
-          background-image: url("../../assets/github-icon.png");
+          background-image: url("../../src/assets/github-icon.png");
           background-repeat: no-repeat;
           background-size: cover;
           box-shadow: #333333 1px 1px 2px; }

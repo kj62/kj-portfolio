@@ -23,7 +23,7 @@ function sassMain() {
 
 function serve() {
     browserSync({
-        server: './src',
+        server: './',
         port: '9000'
     });	
 }
@@ -50,7 +50,7 @@ function minifyHtmlFiles() {
 }
 
 function minifyIndexFile() {
-    return gulp.src('src/index.html')
+    return gulp.src('./index.html')
         .pipe(minifyHtml())
         .on('error', onError)
         .pipe(gulp.dest('./dist'));
@@ -64,7 +64,7 @@ function minifyImgFiles() {
 }
 
 function watch() {
-    gulp.watch(['src/index.html'])
+    gulp.watch(['./index.html'])
 		.on('error', onError)
 		.on('change', gulp.series(minifyIndexFile, browserSync.reload));
 	gulp.watch(['src/views/**/*.html'])

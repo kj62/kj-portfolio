@@ -57,7 +57,7 @@ function minifyIndexFile() {
 }
 
 function minifyImgFiles() {
-    return gulp.src('src/assets/**/*.{jpg,jpeg,png,gif}')
+    return gulp.src('dist/assets/**/*.{jpg,jpeg,png,gif}')
         .pipe(changed('./dist/assets'))
         .pipe(minifyImg())
         .pipe(gulp.dest('./dist/assets'));
@@ -76,7 +76,7 @@ function watch() {
 	gulp.watch(['src/views/**/*.js'])
         .on('error', onError)
         .on('change', gulp.series(minifyScripts, browserSync.reload));
-	gulp.watch(['src/assets/**/*.{jpg,jpeg,png,gif}'])
+	gulp.watch(['dist/assets/**/*.{jpg,jpeg,png,gif}'])
         .on('error', onError)
         .on('change', gulp.series(minifyImgFiles, browserSync.reload));
 }

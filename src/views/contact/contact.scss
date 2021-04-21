@@ -52,19 +52,19 @@ section#contact-container {
                     height: 4rem;
         
                     &.msg {
-                        @include icon-specific("../../src/assets/msg-icon.png");
+                        @include icon-specific("../../dist/assets/msg-icon.png");
                     }
             
                     &.fb {
-                        @include icon-specific("../../src/assets/fb-icon.png");
+                        @include icon-specific("../../dist/assets/fb-icon.png");
                     }
             
                     &.linkedin {
-                        @include icon-specific("../../src/assets/linkedin-icon.png");
+                        @include icon-specific("../../dist/assets/linkedin-icon.png");
                     }
             
                     &.gh {
-                        @include icon-specific("../../src/assets/github-icon.png");
+                        @include icon-specific("../../dist/assets/github-icon.png");
                     }
                 }
             }

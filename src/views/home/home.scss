@@ -1,0 +1,190 @@
+section#home-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+
+    @include selected-animation($animation-std-time, option-slide-in);
+
+    .home-img-name-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .home-img {
+            display: flex;
+            background-image: url("../../assets/profile_4.png");
+            cursor: pointer;
+            background-size: cover;
+            width: 32rem;
+            height: 32rem;
+            border-radius: 6px;
+            transition: all 0.25s ease-out;
+
+            &:hover {
+                @include selected-animation($animation-std-time, home-img-animation);
+                animation-iteration-count: infinite;
+            }
+
+            &.incognito-img {
+                transition: all 0.25s ease-out;
+                background-image: url("../../assets/incognito_img.jpg");
+                background-position-x: center;
+            }
+        }
+
+        .home-name {
+            display: flex;
+            margin: 10px 0 20px 0;
+            font-size: 4rem;
+            line-height: 8rem;
+            color: #f1ebe5;
+            text-shadow: 0 10px 10px #000, 0 -2px 1px #000;
+            letter-spacing: 0.5rem;
+        }
+
+        .home-job {
+            font-size: 3rem;
+            line-height: 1rem;
+            color: #f1ebe5;
+            text-shadow: 0 10px 10px #000, 0 -2px 1px #000;
+            letter-spacing: 0.3rem;
+        }
+    }
+
+    .home-info {
+        display: flex;
+        flex-direction: column;
+        color: #202020;
+        letter-spacing: -2px;
+        width: 32rem;
+
+        span {
+            display: flex;
+            margin: 10px 0 20px 0;
+            font-size: 8rem;
+            line-height: 8rem;
+            color: #f1ebe5;
+            text-shadow: 0 10px 10px #000, 0 -2px 1px #fff;
+            letter-spacing: -2px;
+
+            &.toggle-item {
+                text-shadow: 0 10px 10px #000, 0 -2px 1px #fff;
+                border-bottom: dotted 6px #FFF;
+
+                &:hover {
+                    cursor: pointer;
+                    transition-duration: $animation-std-time/3;
+                    transform: translateY(-1rem);
+                }
+            }
+            
+            &.disable {
+                display: none;
+            }
+
+            &.nice, &.unique, &.simple {
+                @include selected-animation($animation-std-time, toggle-item-animation);
+            }
+        }
+    }
+}
+
+@include option-slide-in-anim();
+
+@keyframes toggle-item-animation {
+    0% {
+        opacity: 0;
+        transform: skewX(-30deg) translateX(-6rem);
+    }
+    100% {
+        opacity: 1;
+        transform: skewX(0deg) translateX(0);
+    }
+}
+
+@keyframes hover-toggle-btn-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes home-img-animation {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@media screen and (max-width: 860px) {
+    section#home-container {
+        flex-direction: column;
+        overflow-y: auto;
+        padding-top: 400px;
+        padding-bottom: 60px;
+
+        .home-img-name-container {
+            margin-bottom: 60px;
+        }
+
+        .home-info span {
+            font-size: 6rem;
+            line-height: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section#home-container .home-img-name-container {
+        margin-top: -280px;
+ 
+        .home-name {
+            font-size: 3rem;
+            line-height: 3rem;
+            letter-spacing: 0;
+        }
+
+        .home-job {
+            font-size: 2rem;
+            line-height: 1rem;
+            letter-spacing: 0;
+        }
+    }
+
+    .home-img {
+        transform: scale(0.7);
+
+        &:hover {
+            animation: none;
+        }
+    }
+
+    section#home-container .home-info {
+        width: 16rem;
+
+        span {
+            font-size: 4rem;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    section#home-container {
+        overflow-x: hidden;
+    }
+
+    nav ul.footer-menu li.footer-item p {
+        font-size: 1.5rem;
+    }
+}

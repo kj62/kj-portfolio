@@ -1,0 +1,199 @@
+section#about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: calc(100vh - 75px);
+    padding-top: 75px;
+    overflow: hidden;
+    @include selected-animation($animation-std-time, option-slide-in);
+
+    .about-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .about-img, .mobile-about-img {
+            position: relative;
+            width: 60rem;
+            height: 30rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            background-image: url("../../assets/dev.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid #000;
+            @include selected-animation($animation-std-time, img-about-main-animation);
+    
+            &.front{
+                background-image: url("../../assets/dev.jpg");
+                @include selected-animation($animation-std-time, img-about-front-animation);
+            }
+    
+            &.tennis-player{
+                background-image: url("../../assets/tennis_player.jpg");
+                @include selected-animation($animation-std-time, img-about-tennis-animation)
+            }
+    
+            &.family{
+                background-image: url("../../assets/family.jpg");
+                @include selected-animation($animation-std-time, img-about-family-animation);
+            }
+        }
+
+        .mobile-about-img {
+            display: none;
+        }
+
+        .about-note {
+            .details-container {
+                p.about-details-header {
+                    text-align: center;
+                    font-style: oblique;
+                    font-size: 3.6rem;
+                    text-shadow: #333333 1px 1px 2px;
+                    color: #000;
+                }
+                p.about-details {
+                    text-align: center;
+                    font-size: 2.4rem;
+                    text-align: center;
+                    padding: 0 4rem;
+                    color: #f1ebe5;
+                    text-shadow: 0 10px 10px #000, 0 -2px 1px #000;
+                }
+            }
+        }
+    }
+    
+    .about-selection {
+        display: flex;
+        flex-direction: column;
+        width: 100rem;
+        justify-content: center;
+
+        .about-desc {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 3rem;
+            line-height: 80px;
+            color: #000;
+            font-weight: 600;
+            text-shadow: #f5f5f5 0px 1px 5px;
+
+            .active-txt {
+                text-shadow: #f2f450 0px 1px 5px;
+            }
+
+            .job-desc {
+                font-size: 3rem;
+            }
+
+            .hobby-desc, .family-desc {
+                font-size: 2rem;
+            }
+
+            .job-desc, .hobby-desc, .family-desc {
+                width: 32rem;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@keyframes img-about-front-animation {
+    0% {
+        opacity: 0;
+        left: -15rem;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes img-about-tennis-animation {
+    0% {
+        opacity: 0;
+        left: -15rem;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes img-about-family-animation {
+    0% {
+        opacity: 0;
+        left: -15rem;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes img-about-main-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include option-slide-in-anim();
+
+@media screen and (max-width: 1280px) {
+    section#about-container .about-info .about-note .details-container p.about-details {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section#about-container {
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .about-info {
+            flex-direction: column;
+    
+            .about-img {
+                display: none;
+            }
+    
+            .mobile-about-img {
+                display: block;
+                width: 70%;
+                height: 20rem;
+                cursor: pointer;
+
+                &.toggle-img {
+                    background-image: url("../../assets/tennisFamily.jpg");
+                }
+            }
+        }
+    }
+
+    section#about-container .about-selection {
+        display: none;
+    }
+
+    section#about-container .about-info .about-note .details-container p.about-details {
+        color: #FFF;
+    }
+
+    section#about-container .about-info .about-note .details-container p.about-details-header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

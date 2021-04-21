@@ -246,7 +246,7 @@ section#home-container {
     align-items: center; }
     section#home-container .home-img-name-container .home-img {
       display: flex;
-      background-image: url("../../assets/profile_4.png");
+      background-image: url("../../src/assets/profile_4.png");
       cursor: pointer;
       background-size: cover;
       width: 32rem;
@@ -259,7 +259,7 @@ section#home-container {
         animation-iteration-count: infinite; }
       section#home-container .home-img-name-container .home-img.incognito-img {
         transition: all 0.25s ease-out;
-        background-image: url("../../assets/incognito_img.jpg");
+        background-image: url("../../src/assets/incognito_img.jpg");
         background-position-x: center; }
     section#home-container .home-img-name-container .home-name {
       display: flex;
@@ -390,22 +390,22 @@ section#about-container {
       height: 30rem;
       margin-left: 2rem;
       margin-top: 2rem;
-      background-image: url("../../assets/dev.jpg");
+      background-image: url("../../src/assets/dev.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       border: 2px solid #000;
       animation-duration: 1500ms;
       animation-name: img-about-main-animation; }
       section#about-container .about-info .about-img.front, section#about-container .about-info .mobile-about-img.front {
-        background-image: url("../../assets/dev.jpg");
+        background-image: url("../../src/assets/dev.jpg");
         animation-duration: 1500ms;
         animation-name: img-about-front-animation; }
       section#about-container .about-info .about-img.tennis-player, section#about-container .about-info .mobile-about-img.tennis-player {
-        background-image: url("../../assets/tennis_player.jpg");
+        background-image: url("../../src/assets/tennis_player.jpg");
         animation-duration: 1500ms;
         animation-name: img-about-tennis-animation; }
       section#about-container .about-info .about-img.family, section#about-container .about-info .mobile-about-img.family {
-        background-image: url("../../assets/family.jpg");
+        background-image: url("../../src/assets/family.jpg");
         animation-duration: 1500ms;
         animation-name: img-about-family-animation; }
     section#about-container .about-info .mobile-about-img {

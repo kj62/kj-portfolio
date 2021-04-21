@@ -74,20 +74,20 @@ section#projects-container {
                         justify-content: center;
 
                         &.tennis-site {
-                            background-image: url("../../assets/tennis_site.png");
+                            background-image: url("../../src/assets/tennis_site.png");
                             @extend %img-setter;
                             width: 77%;
                         }
                         &.js-quiz {
-                            background-image: url("../../assets/js_quiz.png");
+                            background-image: url("../../src/assets/js_quiz.png");
                             @extend %img-setter;
                         }
                         &.gulp-runner {
-                            background-image: url("../../assets/gulp.png");
+                            background-image: url("../../src/assets/gulp.png");
                             @extend %img-setter;
                         }
                         &.clarity-validator {
-                            background-image: url("../../assets/clarity.png");
+                            background-image: url("../../src/assets/clarity.png");
                             @extend %img-setter;
                         }
                     }
